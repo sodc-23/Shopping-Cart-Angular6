@@ -1,0 +1,180 @@
+
+
+.logo{
+	text-align: center;
+	padding-top: 20px;
+  margin-top: 63px;
+  padding: 40px 0;
+}
+.logo h5 {
+	    color: #2c3b4b;
+		font-size: 15px;
+		margin-bottom: 23px;
+}
+
+.ws-cart-empty {
+  text-align: center;
+  cursor: pointer;
+}
+.ws-choose{
+  cursor: pointer;
+}
+.ws-bag{
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  .ws-bag-count{
+    cursor: pointer;
+    position: absolute;
+    font-size: 10px;
+    bottom: -2px;
+    left: -6px;
+    background: #74b82c;
+    width: 14px;
+    /* line-height: 2; */
+    height: 14px;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+  }
+}
+.navbar-light .navbar-nav .active>.nav-link {
+  color:#e7e7ee !important;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: rgb(242, 206, 207);
+}
+
+
+.navbar{
+  background: white;
+  padding: 15px;
+  z-index: 4 ;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
+  top: 0%;
+  z-index: 20;
+  .container {
+    border-bottom: solid 1px rgba(53, 56, 59, 0.2);
+    padding-bottom: 16px;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    width: 86%;
+    height: 0.9px;
+    background: #97999a;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .container{
+    position: relative;
+  }
+  a{
+    color: #434368;
+    cursor: pointer;
+  }
+  .social{
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+  }
+  .social i{
+    margin-right: 5px;
+  }
+  .navbar-brand{
+    position: absolute;
+    left: 10px;
+    font-size: 25px;
+  }
+
+  a.navbar-brand::after {
+    content: "Foods";
+    position: absolute;
+    font-size: 12px;
+    bottom: 0;
+    right: 0;
+  }
+
+}
+
+
+.navHome {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.48), rgba(40, 40, 56, 0));
+  position: absolute;
+  .ws-bag {
+    color:white;
+  }
+  .container{
+    border: none;
+  }
+  a{
+    color: #e7e7ee;
+  }
+}
+
+.navbar::after {
+  background: none;
+}
+
+.nav-fixed{
+  background: #74b82c;
+  position: fixed;
+  border-bottom: solid #e60513;
+  top: 0;
+  animation: scroll 0.5s forwards;
+  .container {
+    border: none;
+    padding-bottom: 0;
+  }
+  &::after{
+    height: 0;
+  }
+  a{
+    color: white !important;
+  }
+  .social{
+    color: white;
+  }
+  .ws-bag-count{
+    color: #74b82c;
+    background: white;
+  }
+}
+
+
+@keyframes scroll{
+	0%{
+		transform: translateY(-50px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+
+
+@media screen and (max-width: 890px) {
+  #mainNav{
+    padding-bottom: 50px;
+  }
+  .navbar .navbar-brand{
+    left: 64px;
+    font-size: 18px;
+    top: 0;
+  }
+  .social{
+    position: relative !important;
+    margin-left: auto;
+  }
+  .navHome{
+    background: white;
+    position: relative;
+    a, .ws-bag {
+      color: black !important;
+    }
+  }
+}

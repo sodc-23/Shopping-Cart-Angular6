@@ -1,0 +1,11 @@
+<div class="container">
+  <h5>
+    <i class="icon ion-ios-arrow-back" (click)="navigateToHome()"></i>
+    Our Brands
+  </h5>
+   <div class="row">
+      <div class="col-md-4" *ngFor="let img of brands">
+        <img [src]="img" >
+      </div>
+   </div>
+</div>

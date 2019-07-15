@@ -1,0 +1,62 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light" [class.nav-fixed]="navFixed" [class.navHome]="navHome">
+    <div class="container">
+        <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active"  >Salem</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse justify-content-center" [class.d]="collapse" id="mainNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/']"  >Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="navigate('service')">Service </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/brands']">Brands </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/products']">Products </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/about-us']">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+            </li>
+          </ul>
+          </div>
+          <div class="social">
+            <div class="ws-bag">
+              <i class="icon ion-bag" [matMenuTriggerFor]="menu"></i>
+              <div class="ws-bag-count" [matMenuTriggerFor]="menu"> {{cartItems.length}} </div>
+              <mat-menu #menu="matMenu" class="px-3 pt-3" xPosition="before" direction="center">
+                  <div *ngIf="cartItems.length == 0;then cartempty else cart">
+                  </div>
+                  <ng-template #cartempty  class="ws-cart-empty text-center">
+                       <div class="text-center ws-cart-icon h3">
+                          <i class="icon ion-bag"></i>
+                       </div>
+                      <div class="p small lead">Your Cart is empty</div>
+                      <p class="text-center small font-weight-bold mt-2 ws-choose" (click)="navigate('retail')" >Choose Product</p>
+                  </ng-template>
+                  <ng-template #cart  class="ws-cart">
+                      <div class="text-center ws-cart-icon h3">
+                          <i class="icon ion-bag"></i>
+                       </div>
+                       <p class="small lead text-center">You have {{cartItems.length}} items in your cart </p>
+                       <p class="text-center small font-weight-bold mt-2 ws-choose" (click)="navigateToCart()" >View my Cart</p>
+                  </ng-template>
+                </mat-menu>
+            </div>
+            <a [href]="social.facebook"> <i class="icon ion-social-facebook"></i></a>
+            <a [href]="social.google" target="_blank"> <i class="icon ion-social-google"></i>  </a>
+            <a [href]="social.twitter" target="_blank"> <i class="icon ion-social-twitter"></i> </a>
+          </div>
+      </div>
+  </nav>
+  <div class="top-logo" *ngIf="route.url != '/'">
+      <img src="assets/img/logo.png" class="img-logo">
+  </div>
+</header>

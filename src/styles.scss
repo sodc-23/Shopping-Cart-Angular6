@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+  background:#f6f9fc;
+  background-image: url('/assets/img/bg.jpg');
+	font-family: Montserrat Alternates;
+}
+
+.container{
+	width: 90%;
+}
+
+
+.small{
+  font-size: 12px;
+}
+
+.mat-focused .mat-form-field-label{
+  color: #74b82c;
+}
+.mat-focused .mat-form-field-underline .mat-form-field-ripple{
+  background: #74b82c;
+}
+
+.mat-dialog-container{
+  overflow-y: scroll;
+  max-height: 95vh;
+}
+
+
+.top-logo {
+  text-align: center;
+  margin-bottom: 25px;
+  .img-logo{
+    width: 200px;
+  }
+}
